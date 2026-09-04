@@ -1,0 +1,83 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #031628 0%, #082d4d 50%, #0d426d 100%);
+    color: #f0f9ff;
+    overflow-x: hidden;
+}
+
+.code-font {
+    font-family: 'Fira Code', monospace;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+.animate-float {
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float-slow {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-16px); }
+}
+
+.animate-float-slow {
+    animation: float-slow 7s ease-in-out infinite;
+}
+
+.bio-glow {
+    box-shadow: 0 0 25px rgba(72, 202, 228, 0.3);
+    transition: all 0.3s ease;
+}
+
+.bio-glow:hover {
+    box-shadow: 0 0 40px rgba(0, 240, 255, 0.6), 0 0 15px rgba(94, 234, 212, 0.8);
+    transform: translateY(-4px);
+}
+
+.glass-card {
+    background: rgba(8, 43, 74, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(72, 202, 228, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(0, 180, 216, 0.15);
+}
+
+.glass-card:hover {
+    border-color: rgba(0, 240, 255, 0.6);
+    box-shadow: 0 12px 36px 0 rgba(0, 240, 255, 0.25);
+}
+
+@keyframes moveWave {
+    0% { transform: translateX(0) translateZ(0) scaleY(1); }
+    50% { transform: translateX(-25%) translateZ(0) scaleY(0.85); }
+    100% { transform: translateX(-50%) translateZ(0) scaleY(1); }
+}
+
+.wave-path {
+    animation: moveWave 12s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+}
+
+.wave-path-slow {
+    animation: moveWave 18s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    opacity: 0.5;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #03192e;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00b4d8;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00f0ff;
+}
